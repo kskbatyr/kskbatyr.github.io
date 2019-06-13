@@ -1,0 +1,12 @@
+﻿{% extends 'article/base.html' %}
+{% block title %}
+    Документы
+{% endblock %}
+{% block page_content %}
+   <h2>Документы</h2>
+    <div class="docs">
+        {% for doc in docs %}
+            <p><a href="/media/{{ doc.file }}" target="_blank">{{ doc.name }} - {{ doc.date|date:"d.m.Y" }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock %}

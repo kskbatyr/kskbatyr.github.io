@@ -1,0 +1,23 @@
+﻿{% extends 'article/base.html' %}
+{% block title %}
+    Личный кабинет
+{% endblock %}
+{% block page_content %}
+    <h2>Личный кабинет</h2>
+
+    <p>Имя: {{ profile.first_name }}</p>
+    <p>Фамилия: {{ profile.last_name }}</p>
+    <p>Отчество: {{ profile.patronymic }}</p>
+    <p>Номер дома: {{ profile.home }}</p>
+    <p>Номер квартиры: {{ profile.apartment }}</p>
+    <p>Почта: {{ profile.email }}</p>
+    <p>Номер договора купли-продажи: <b>{{ profile.contract }}</b></p>
+
+    <h3>Какие работы проводились в Вашем доме.</h3>
+
+    <div class="docs">
+        {% for doc in docs %}
+            <p><a href="/media/{{ doc.file }}" target="_blank">{{ doc.name }} - {{ doc.date|date:"d.m.Y" }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+html, body, div, span, h1, h2, h3, p, a, img, ul, li, form, aside, footer, nav, section, textarea, input, table, td, tr{border:0; font:inherit; font-size:100%; margin:0; padding:0; vertical-align:top; line-height:1; list-style-type: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+body{color:#000000; font-family: Arial; font-size: 16px;}
+h1 {font-size: 48px; text-align: center; padding-top: 35px; color:#fff;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+strong, h2 {display: block;}
+h2, h3 {font-size: 30px; text-align: center; color:#1e3562; text-transform: uppercase; padding: 45px 0 40px 0;}
+h3 {font-size: 20px;}
+input, textarea {height: 35px; background:#e4e6e8; margin-top: 10px; padding-left: 10px; width: 180px; font-size: 14px; display: block; line-height: 35px;}
+
+.con{width: 100%; max-width: 900px; margin: 0 auto;}
+
+.header {width: 900px; height: 123px; background:#353a40;}
+.header a {display: block; color:#e4f3ff; float: right; padding: 0 30px;}
+.header a:hover {color:#a2d9f0;}
+
+.left {width: 240px; float: left; background:#f8f9fb; padding-left: 30px;}
+.left ul a {font-size:18px; color:#3c84d0; padding: 30px 0 10px 0; display: block;}
+
+.lich-kab .zag a {display: block; font-size: 18px; text-transform: underline; line-height: 50px; width: 240px; background:#353a40; color:#fff; margin: 20px 0 20px 0; text-align: center; margin-left:-30px;}
+.lich-kab .zag a:hover {color:#a2d9f0;}
+
+.login {background: #0c60c4; color:#fff; cursor:pointer; margin-bottom: 30px;}
+
+.reg-zab-p {padding: 10px 0 25px 0;}
+.reg-zab-p a {color:#3c84d0; display: block; line-height: 25px; font-size: 14px;}
+
+.infa {background:#ecf1f6; padding-bottom: 50px; width: 660px; overflow: hidden;}
+
+.infa input {margin-left: 30px; width: 250px;}
+.infa textarea {margin-left: 30px; width: 550px; height: 200px;}
+
+.infa p {padding: 0 30px 20px; font-size: 16px; line-height: 20px;}
+
+
+.docs a {background:url("/img/xls.png") left 8px no-repeat; line-height: 50px; display: block; padding-left: 50px; color:#3c84d0;}
+

@@ -1,0 +1,39 @@
+﻿{% extends 'article/base.html' %}
+{% block title %}
+    Регистрация
+{% endblock %}
+{% block page_content %}
+    <h2>Регистрация</h2>
+
+    <form method="POST" class="fb">
+        {% csrf_token %}
+        {{ form.last_name }}
+        {{ form.first_name }}
+        {{ form.patronymic }}
+        {{ form.home }}
+        {{ form.apartment }}
+        {{ form.email }}
+        {{ form.password }}
+        {{ form.password2 }}
+        {{ form.contract }}
+        {% if error.title %}<p style="color: red;">{{ error.title }}</p>{% endif %}
+        <input type="submit" value="Зарегистрироваться" class="login">
+    </form>
+    <script>
+        var password = document.getElementById("password")
+          , confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword(){
+          if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+          } else {
+            confirm_password.setCustomValidity('');
+          }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+{% endblock %}
+
+

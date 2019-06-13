@@ -1,0 +1,16 @@
+﻿{% extends 'article/base.html' %}
+{% block title %}
+    Заявка на ремонт
+{% endblock %}
+{% block page_content %}
+    <h2>Заявка на ремонт</h2>
+
+    <form method="POST" class="fb">
+    <input placeholder="Ваше имя">
+    <input placeholder="Номер квартиры">
+    <input placeholder="Телефон">
+    <input placeholder="Адрес электронной почты">
+    <textarea rows="10" cols="45" placeholder="Описание неисправности"></textarea>
+    <input type="submit" value="Отправить заявку" class="login">
+    </form>
+{% endblock %}

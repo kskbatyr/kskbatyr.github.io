@@ -1,0 +1,68 @@
+﻿{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<title>{% block title %}{% endblock %} &ndash; Сайт КСК</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<div class="con">
+
+<div class="header">
+<h1>Сайт КСК</h1>
+    {% if auth_p == 'ok' %}
+<a href="/signout">Выйти</a>
+        {% if request.get_full_path != '/lich_cab/' %}
+            <a href="/lich_cab">Личный кабинет</a>
+        {% endif %}
+    {% endif %}
+</div>
+
+<div class="left">
+
+<ul>
+<li><a href="/">Главная</a></li>
+<li><a href="/info">Ифнормация о КСК</a></li>
+<li><a href="/documents">Документы</a></li>
+<li><a href="/zayavka">Заявка на ремонт</a></li>
+<li><a href="/contacts">Контакты</a></li>
+</ul>
+
+<div class="lich-kab">
+
+{% if auth_p == 'no' %}
+    <div class="zag"><a>Авторизация</a></div>
+<form action="/signin/" method="POST" class="fb" enctype="multipart/form-data">
+    {% csrf_token %}
+{{ form_l.email }}
+{{ form_l.password }}
+    {% if error.title %}{{ error.title }}{% endif %}
+<input type="submit" value="Войти" class="login">
+
+<a href="/registration">Регистрация</a></li>
+<a href="/zab_parol">Забыли парол?</a></li>
+</form>
+{% else %}
+<div class="zag"><a href="/lich_cab">Личный кабинет</a></div>
+{% endif %}
+<div class="reg-zab-p">
+
+</div>
+</div>
+
+</div>
+
+
+<div class="infa">
+
+    {% block page_content %}{% endblock %}
+
+</div>
+
+</div>
+
+<link rel="stylesheet" type="text/css" href="{% static 'article/css/style.css' %}" />
+</body>
+</html>
